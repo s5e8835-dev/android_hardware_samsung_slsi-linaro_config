@@ -15,6 +15,7 @@
 #
 
 PRODUCT_SOONG_NAMESPACES += \
+    hardware/samsung_slsi-linaro/codec2 \
     hardware/samsung_slsi-linaro/exynos \
     hardware/samsung_slsi-linaro/exynos5 \
     hardware/samsung_slsi-linaro/graphics \
