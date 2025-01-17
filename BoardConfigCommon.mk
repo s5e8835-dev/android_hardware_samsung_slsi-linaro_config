@@ -50,4 +50,21 @@ ifeq ($(BOARD_USES_EXYNOS_GRALLOC_VERSION),4)
 $(call soong_config_set,exynosgraphicbuffer,gralloc_version,four)
 endif
 
+# libexynosscaler
+ifeq ($(BOARD_USES_SCALER_M2M1SHOT), true)
+$(call soong_config_set,libexynosscaler,USES_SCALER_M2M1SHOT,true)
+endif
+
+ifeq ($(BOARD_USES_ALIGN_RESTRICTION), true)
+$(call soong_config_set,libexynosscaler,HAS_SCALER_ALIGN_RESTRICTION,true)
+endif
+
+ifneq ($(filter 3.18 4.4, $(TARGET_LINUX_KERNEL_VERSION)),)
+$(call soong_config_set,libexynosscaler,SCALER_USE_PREMUL_FMT,true)
+endif
+
+ifeq ($(BOARD_USES_LEGACY_LIBSCALER), true)
+$(call soong_config_set,libexynosscaler,USE_LEGACY,true)
+endif
+
 include hardware/samsung_slsi-linaro/config/openmax.mk
