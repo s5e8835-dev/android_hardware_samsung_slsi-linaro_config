@@ -34,8 +34,15 @@ $(call soong_config_set,libacryl,g2d9810_hdr_plugin,$(BOARD_LIBACRYL_G2D9810_HDR
 endif
 
 # exynosgraphicbuffer
+ifeq ($(BOARD_USES_EXYNOS_GRALLOC_VERSION),0)
+$(call soong_config_set,libgrallocwrapper,gralloc_version,none)
+endif
+ifeq ($(BOARD_USES_EXYNOS_GRALLOC_VERSION),1)
+$(call soong_config_set,libgrallocwrapper,gralloc_version,one)
+endif
 ifeq ($(BOARD_USES_EXYNOS_GRALLOC_VERSION),3)
 $(call soong_config_set,exynosgraphicbuffer,gralloc_version,three)
+$(call soong_config_set,libgrallocwrapper,gralloc_version,three)
 endif
 ifeq ($(BOARD_USES_EXYNOS_GRALLOC_VERSION),4)
 $(call soong_config_set,exynosgraphicbuffer,gralloc_version,four)
