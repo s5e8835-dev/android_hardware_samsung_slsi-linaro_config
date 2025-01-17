@@ -40,3 +40,5 @@ endif
 ifeq ($(BOARD_USES_EXYNOS_GRALLOC_VERSION),4)
 $(call soong_config_set,exynosgraphicbuffer,gralloc_version,four)
 endif
+
+include hardware/samsung_slsi-linaro/config/openmax.mk
