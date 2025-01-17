@@ -39,6 +39,7 @@ $(call soong_config_set,libgrallocwrapper,gralloc_version,none)
 endif
 ifeq ($(BOARD_USES_EXYNOS_GRALLOC_VERSION),1)
 $(call soong_config_set,libgrallocwrapper,gralloc_version,one)
+include hardware/samsung_slsi-linaro/config/gralloc1.mk
 endif
 ifeq ($(BOARD_USES_EXYNOS_GRALLOC_VERSION),3)
 $(call soong_config_set,exynosgraphicbuffer,gralloc_version,three)
