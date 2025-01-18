@@ -58,6 +58,7 @@ TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := false
 TARGET_USES_HWC2 := true
 ifneq ($(BOARD_VENDOR), samsung)
 HWC_SUPPORT_COLOR_TRANSFORM := true
+TARGET_USES_DISPLAY_RENDER_INTENTS := true
 endif
 HWC_SKIP_VALIDATE := true
 BOARD_USES_EXYNOS_AFBC_FEATURE := true
@@ -80,6 +81,8 @@ BOARD_LIBACRYL_DEFAULT_SCALER := mscl_9810
 BOARD_LIBACRYL_DEFAULT_BLTER := fimg2d_9810_blter
 
 ifneq ($(BOARD_VENDOR), samsung)
+
+$(call soong_config_set,libacryl,g2d9810_hdr_plugin,libacryl_plugin_slsi_hdr10)
 
 $(call soong_config_set,libhwjpeg,HWJPEG_ANDROID_VERSION,10)
 
