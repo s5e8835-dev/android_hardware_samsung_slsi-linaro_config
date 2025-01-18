@@ -80,7 +80,4 @@ BOARD_LIBACRYL_DEFAULT_SCALER := mscl_3830
 #BOARD_LIBACRYL_DEFAULT_BLTER := fimg2d_9810_blter
 #BOARD_LIBACRYL_G2D9810_HDR_PLUGIN := libacryl_plugin_slsi_hdr10
 
-# MobiCore namespace
-PRODUCT_SOONG_NAMESPACES += hardware/samsung_slsi-linaro/exynos/tee/kinibi500
-
 include hardware/samsung_slsi-linaro/config/BoardConfigCommon.mk

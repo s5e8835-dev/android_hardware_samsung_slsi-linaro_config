@@ -83,13 +83,7 @@ ifneq ($(BOARD_VENDOR), samsung)
 
 $(call soong_config_set,libhwjpeg,HWJPEG_ANDROID_VERSION,10)
 
-# codec2
-PRODUCT_SOONG_NAMESPACES += hardware/samsung_slsi-linaro/exynos/c2service
-
 BOARD_USES_MOBICORE_TEE := true
-
-# MobiCore namespace
-PRODUCT_SOONG_NAMESPACES += hardware/samsung_slsi-linaro/exynos/tee/kinibi410
 
 endif
 

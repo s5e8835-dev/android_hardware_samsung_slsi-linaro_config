@@ -1,6 +1,4 @@
 
-PRODUCT_SOONG_NAMESPACES += hardware/samsung_slsi-linaro/exynos/gralloc/gralloc1
-
 ifeq ($(BOARD_USES_EXYNOS5_GRALLOC_RANGE_FLUSH), true)
 $(call soong_config_set,arm_gralloc,DGRALLOC_RANGE_FLUSH,true)
 endif
