@@ -14,5 +14,6 @@
 # limitations under the License.
 #
 
-include hardware/samsung_slsi-linaro/config/BoardConfig9610.mk
 TARGET_SOC_BASE := exynos9610
+
+include hardware/samsung_slsi-linaro/config/BoardConfig9610.mk
