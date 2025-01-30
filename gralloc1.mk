@@ -1,4 +1,5 @@
 
+$(call soong_config_set,arm_gralloc,gralloc_version,one)
 ifeq ($(BOARD_USES_EXYNOS5_GRALLOC_RANGE_FLUSH), true)
 $(call soong_config_set,arm_gralloc,DGRALLOC_RANGE_FLUSH,true)
 endif
