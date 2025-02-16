@@ -21,7 +21,7 @@ $(call soong_config_set,openmax,USE_MFC_HEADER,true)
 endif
 
 # since 4.19 kernel
-ifneq ($(filter 4.19 5.4, $(TARGET_LINUX_KERNEL_VERSION)),)
+ifneq ($(filter 4.19 5.4 5.10, $(TARGET_LINUX_KERNEL_VERSION)),)
 $(call soong_config_set,openmax,MAINLINE_FEATURE_IN_SINCE_4_19,true)
 endif
 
