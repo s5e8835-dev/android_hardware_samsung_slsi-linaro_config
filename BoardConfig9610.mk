@@ -77,8 +77,6 @@ $(call soong_config_set,libacryl,g2d9810_hdr_plugin,libacryl_plugin_slsi_hdr10)
 
 $(call soong_config_set,libhwjpeg,HWJPEG_ANDROID_VERSION,10)
 
-BOARD_USES_MOBICORE_TEE := true
-
 endif
 
 include hardware/samsung_slsi-linaro/config/BoardConfigCommon.mk
