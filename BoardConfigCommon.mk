@@ -49,7 +49,7 @@ endif
 
 # libexynosscaler
 ifeq ($(BOARD_USES_SCALER_M2M1SHOT), true)
-$(call soong_config_set,libexynosscaler,USES_SCALER_M2M1SHOT,true)
+$(call soong_config_set,libexynosscaler,SCALER_USE_M2M1SHOT,true)
 endif
 
 ifeq ($(BOARD_USES_ALIGN_RESTRICTION), true)
