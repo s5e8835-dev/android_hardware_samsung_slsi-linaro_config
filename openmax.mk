@@ -177,3 +177,7 @@ endif
 ifeq ($(BOARD_USE_NON_DRM_CODEC_ONLY), true)
 $(call soong_config_set,openmax,USE_NON_DRM_CODEC_ONLY,true)
 endif
+
+ifeq ($(BOARD_USE_CSC_FILTER), true)
+$(call soong_config_set,openmax,USE_CSC_FILTER,true)
+endif
