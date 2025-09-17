@@ -19,19 +19,6 @@ ifeq ($(TARGET_SOC), exynos2100)
 $(call soong_config_set,arm_gralloc,GRALLOC_DPU_SUPPORT_1010102_AFBC,true)
 endif
 
-# Disable ION debug handle import on 7885
-ifeq ($(TARGET_SOC), exynos7885)
-$(call soong_config_set,arm_gralloc,gralloc_ion_handle_import,false)
-$(call soong_config_set,arm_gralloc,GRALLOC_7885_WA,true)
-endif
-
-# HEVC Encoder H/W restriction
-ifneq ($(filter exynos7885 exynos7872,$(TARGET_SOC_BASE)),)
-ifneq ($(BOARD_MFC_CHROMA_VALIGN),)
-$(call soong_config_set,arm_gralloc,MFC_CHROMA_VALIGN,$(BOARD_MFC_CHROMA_VALIG))
-endif
-endif
-
 ifeq ($(BOARD_USES_EXYNOS_DATASPACE_FEATURE), true)
 $(call soong_config_set,arm_gralloc,uses_exynos_dataspace_feature,true)
 endif
