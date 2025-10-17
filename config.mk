@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2024 The LineageOS Project
+# Copyright (C) 2024-2025 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -20,4 +20,5 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/samsung_slsi-linaro/exynos5 \
     hardware/samsung_slsi-linaro/graphics \
     hardware/samsung_slsi-linaro/interfaces \
-    hardware/samsung_slsi-linaro/openmax
+    hardware/samsung_slsi-linaro/openmax \
+    hardware/samsung_slsi-linaro/sgpu
