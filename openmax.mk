@@ -119,7 +119,7 @@ $(call soong_config_set,openmax,USE_FULL_ST2094_40,true)
 endif
 
 ifeq ($(BOARD_USE_HDR10PLUS_STAT_ENC), true)
-$(call soong_config_set,openmax,USE_FULL_ST2094_40,true)
+$(call soong_config_set,openmax,USE_HDR10PLUS_STAT_ENC,true)
 endif
 
 ifeq ($(BOARD_HAS_SCALER_ALIGN_RESTRICTION), true)
