@@ -204,3 +204,47 @@ endif
 ifeq ($(BOARD_USE_CSC_FILTER), true)
 $(call soong_config_set,openmax,USE_CSC_FILTER,true)
 endif
+
+ifeq ($(BOARD_SUPPORT_MFC_ENC_RGB), true)
+$(call soong_config_set,openmax,SUPPORT_MFC_ENC_RGB,true)
+endif
+
+ifeq ($(BOARD_USE_GDC), true)
+$(call soong_config_set,openmax,USE_GDC,true)
+endif
+
+ifeq ($(BOARD_SUPPORT_MFC_ENC_BT2020), true)
+$(call soong_config_set,openmax,SUPPORT_MFC_ENC_BT2020,true)
+endif
+
+ifdef BOARD_GPU_TYPE
+$(call soong_config_set,openmax,GPU_TYPE,$(BOARD_GPU_TYPE))
+endif
+
+ifeq ($(BOARD_USE_DEC_SW_CSC), true)
+$(call soong_config_set,openmax,USE_DEC_SW_CSC,true)
+endif
+
+ifeq ($(BOARD_USE_BLOB_ALLOCATOR), true)
+$(call soong_config_set,openmax,USE_BLOB_ALLOCATOR,true)
+endif
+
+ifeq ($(BOARD_USE_QUERY_HDR2SDR), true)
+$(call soong_config_set,openmax,USE_QUERY_HDR2SDR,true)
+endif
+
+ifdef BOARD_HDR_DYNAMIC_META_LIB
+$(call soong_config_set,openmax,HDR_DYNAMIC_META_LIB,$(BOARD_HDR_DYNAMIC_META_LIB))
+endif
+
+ifeq ($(BOARD_USE_FILMGRAIN_FILTER), true)
+$(call soong_config_set,openmax,USE_FILMGRAIN_FILTER,true)
+endif
+
+ifeq ($(BOARD_USE_SUPPORT_GPU_SBWC), true)
+$(call soong_config_set,openmax,USE_SUPPORT_GPU_SBWC,true)
+endif
+
+ifeq ($(BOARD_USE_FLEXIBLE_P010), true)
+$(call soong_config_set,openmax,USE_FLEXIBLE_P010,true)
+endif
