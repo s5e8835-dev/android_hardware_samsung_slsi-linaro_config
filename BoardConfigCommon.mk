@@ -20,6 +20,7 @@ TARGET_SOC_NAME := exynos
 BOARD_USES_DT := true
 
 # Acryl
+$(call soong_config_set,libacryl,target_soc_base,$(TARGET_SOC_BASE))
 ifneq ($(BOARD_LIBACRYL_DEFAULT_COMPOSITOR),)
 $(call soong_config_set,libacryl,default_compositor,$(BOARD_LIBACRYL_DEFAULT_COMPOSITOR))
 endif
