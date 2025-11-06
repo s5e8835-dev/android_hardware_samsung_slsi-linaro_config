@@ -19,6 +19,9 @@ TARGET_SLSI_VARIANT := linaro
 TARGET_SOC_NAME := exynos
 BOARD_USES_DT := true
 
+TARGET_RECOVERY_UI_BRIGHTNESS_FILE := /sys/class/backlight/panel/brightness
+TARGET_RECOVERY_UI_MAX_BRIGHTNESS_FILE := /sys/class/backlight/panel/max_brightness
+
 # Acryl
 $(call soong_config_set,libacryl,target_soc_base,$(TARGET_SOC_BASE))
 ifneq ($(BOARD_LIBACRYL_DEFAULT_COMPOSITOR),)
