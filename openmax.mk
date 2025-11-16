@@ -238,7 +238,7 @@ ifdef BOARD_HDR_DYNAMIC_META_LIB
 $(call soong_config_set,openmax,HDR_DYNAMIC_META_LIB,$(BOARD_HDR_DYNAMIC_META_LIB))
 endif
 
-ifeq ($(BOARD_USE_FILMGRAIN_FILTER), true)
+ifeq ($(BOARD_HW_SUPPORT_FILMGRAIN), true)
 $(call soong_config_set,openmax,USE_FILMGRAIN_FILTER,true)
 endif
 
