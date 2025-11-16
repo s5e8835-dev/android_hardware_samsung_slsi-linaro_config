@@ -58,7 +58,7 @@ ifeq ($(BOARD_USES_DECON_64BIT_ADDRESS), true)
 $(call soong_config_set,exynos_hwc,USES_DECON_64BIT_ADDRESS,true)
 endif
 
-ifeq ($(SOONG_CONFIG_sgr_enable_sajc), true)
+ifeq ($(BOARD_USES_EXYNOS_SAJC_FEATURE), true)
 $(call soong_config_set,exynos_hwc,USES_SAJC_FEATURE,true)
 endif
 
