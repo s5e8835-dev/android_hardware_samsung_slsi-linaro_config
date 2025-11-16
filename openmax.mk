@@ -116,6 +116,7 @@ endif
 
 ifeq ($(BOARD_USE_FULL_ST2094_40), true)
 $(call soong_config_set,openmax,USE_FULL_ST2094_40,true)
+$(call soong_config_set,exynos_headers_c2,full_st2094_40,true)
 endif
 
 ifeq ($(BOARD_USE_HDR10PLUS_STAT_ENC), true)
