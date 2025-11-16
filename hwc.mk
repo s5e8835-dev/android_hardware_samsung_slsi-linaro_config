@@ -76,6 +76,11 @@ $(call soong_config_set,exynos_hwc,GRALLOC_VERSION1,true)
 $(call soong_config_set,exynos_hwc,GRALLOC_VERSION3,true)
 endif
 
+ifeq ($(BOARD_USES_EXYNOS_GRALLOC_VERSION), sgr)
+$(call soong_config_set,exynos_hwc,GRALLOC_VERSION1,true)
+$(call soong_config_set,exynos_hwc,GRALLOC_VERSION3,true)
+endif
+
 ifeq ($(BOARD_USES_HDRUI_GLES_CONVERSION), true)
 $(call soong_config_set,exynos_hwc,USES_HDR_GLES_CONVERSION,true)
 endif

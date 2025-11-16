@@ -50,6 +50,9 @@ endif
 ifeq ($(BOARD_USES_EXYNOS_GRALLOC_VERSION),4)
 $(call soong_config_set,arm_gralloc,gralloc_version,four)
 endif
+ifeq ($(BOARD_USES_EXYNOS_GRALLOC_VERSION),sgr)
+$(call soong_config_set,arm_gralloc,gralloc_version,four_sgr)
+endif
 
 # libexynosscaler
 ifeq ($(BOARD_USES_SCALER_M2M1SHOT), true)
