@@ -71,5 +71,10 @@ ifeq ($(BOARD_USES_LEGACY_LIBSCALER), true)
 $(call soong_config_set,libexynosscaler,USE_LEGACY,true)
 endif
 
+# libexynosgdc
+ifeq ($(BOARD_USES_LEGACY_LIBGDC), true)
+$(call soong_config_set,libexynosgdc,use_legacy_function_alignment,true)
+endif
+
 include hardware/samsung_slsi-linaro/config/hwc.mk
 include hardware/samsung_slsi-linaro/config/openmax.mk
