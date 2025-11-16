@@ -21,10 +21,12 @@ endif
 $(call soong_config_set,exynos_hwc,target_soc_base,$(TARGET_SOC_BASE))
 
 ifdef BOARD_LIBHDR_PLUGIN
+$(call soong_config_set,exynos_hwc,USE_LIBHDR_PLUGIN,true)
 $(call soong_config_set,exynos_hwc,libhdr_plugin,$(BOARD_LIBHDR_PLUGIN))
 endif
 
 ifdef BOARD_LIBHDR10P_META_PLUGIN
+$(call soong_config_set,exynos_hwc,USE_LIBHDR10P_META_PLUGIN,true)
 $(call soong_config_set,exynos_hwc,libhdr10p_meta_plugin,$(BOARD_LIBHDR10P_META_PLUGIN))
 endif
 
@@ -93,14 +95,6 @@ endif
 
 ifeq ($(BOARD_USES_HDR_INTERFACE), true)
 $(call soong_config_set,exynos_hwc,USE_HDR_INTERFACE,true)
-endif
-
-ifeq ($(BOARD_USES_LIBHDR_PLUGIN), true)
-$(call soong_config_set,exynos_hwc,USE_LIBHDR_PLUGIN,true)
-endif
-
-ifeq ($(BOARD_USES_LIBHDR10P_META_PLUGIN), true)
-$(call soong_config_set,exynos_hwc,USE_LIBHDR10P_META_PLUGIN,true)
 endif
 
 ifeq ($(BOARD_USES_DEFAULT_LIBHDR_HEADER), true)
