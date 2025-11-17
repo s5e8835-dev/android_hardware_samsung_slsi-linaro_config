@@ -76,5 +76,10 @@ ifeq ($(BOARD_USES_LEGACY_LIBGDC), true)
 $(call soong_config_set,libexynosgdc,use_legacy_function_alignment,true)
 endif
 
+# libsbwcwrapper
+ifneq ($(BOARD_SBWC_WRAPPER_PRIORITY),)
+$(call soong_config_set,sbwcwrapper,sbwcwrapper_priority,$(BOARD_SBWC_WRAPPER_PRIORITY))
+endif
+
 include hardware/samsung_slsi-linaro/config/hwc.mk
 include hardware/samsung_slsi-linaro/config/openmax.mk
