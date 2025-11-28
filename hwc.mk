@@ -103,6 +103,12 @@ ifeq ($(BOARD_USES_LIBHDR10P_META_PLUGIN), true)
 $(call soong_config_set,exynos_hwc,USE_LIBHDR10P_META_PLUGIN,true)
 endif
 
+ifeq ($(BOARD_USES_DEFAULT_LIBHDR_HEADER), true)
+$(call soong_config_set,exynos_hwc,libhdr_header_version,default)
+else
+$(call soong_config_set,exynos_hwc,libhdr_header_version,exynos9630)
+endif
+
 ifeq ($(BOARD_USES_DQE_INTERFACE), true)
 $(call soong_config_set,exynos_hwc,USE_DQE_INTERFACE,true)
 endif
