@@ -45,24 +45,24 @@ endif
 
 # libexynosscaler
 ifeq ($(BOARD_USES_SCALER_M2M1SHOT), true)
-$(call soong_config_set_bool,libexynosscaler,SCALER_USE_M2M1SHOT,true)
+$(call soong_config_set,libexynosscaler,SCALER_USE_M2M1SHOT,true)
 endif
 
 ifeq ($(BOARD_USES_ALIGN_RESTRICTION), true)
-$(call soong_config_set_bool,libexynosscaler,HAS_SCALER_ALIGN_RESTRICTION,true)
+$(call soong_config_set,libexynosscaler,HAS_SCALER_ALIGN_RESTRICTION,true)
 endif
 
 ifneq ($(filter 3.18 4.4, $(TARGET_LINUX_KERNEL_VERSION)),)
-$(call soong_config_set_bool,libexynosscaler,SCALER_USE_PREMUL_FMT,true)
+$(call soong_config_set,libexynosscaler,SCALER_USE_PREMUL_FMT,true)
 endif
 
 ifeq ($(BOARD_USES_LEGACY_LIBSCALER), true)
-$(call soong_config_set_bool,libexynosscaler,USE_LEGACY,true)
+$(call soong_config_set,libexynosscaler,USE_LEGACY,true)
 endif
 
 # libexynosgdc
 ifeq ($(BOARD_USES_LEGACY_LIBGDC), true)
-$(call soong_config_set_bool,libexynosgdc,use_legacy_function_alignment,true)
+$(call soong_config_set,libexynosgdc,use_legacy_function_alignment,true)
 endif
 
 # libsbwcwrapper
