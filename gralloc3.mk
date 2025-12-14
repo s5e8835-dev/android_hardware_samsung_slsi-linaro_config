@@ -32,7 +32,7 @@ $(call soong_config_set,arm_gralloc,gralloc_ion_sync,true)
 endif
 
 ifneq ($(BOARD_EXYNOS_S10B_FORMAT_ALIGN),)
-$(call soong_config_set_bool,arm_gralloc,exynos_s10b_format_align,$(BOARD_EXYNOS_S10B_FORMAT_ALIGN))
+$(call soong_config_set,arm_gralloc,exynos_s10b_format_align,$(BOARD_EXYNOS_S10B_FORMAT_ALIGN))
 endif
 
 ifeq ($(BOARD_USES_ALIGN_RESTRICTION), true)
