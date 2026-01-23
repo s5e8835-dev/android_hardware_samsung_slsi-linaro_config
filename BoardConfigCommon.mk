@@ -37,7 +37,7 @@ ifeq ($(BOARD_USES_EXYNOS_GRALLOC_VERSION),3)
 include hardware/samsung_slsi-linaro/config/gralloc3.mk
 endif
 ifeq ($(BOARD_USES_EXYNOS_GRALLOC_VERSION),4)
-$(call soong_config_set,arm_gralloc,gralloc_version,four)
+include hardware/samsung_slsi-linaro/config/gralloc4.mk
 endif
 ifeq ($(BOARD_USES_EXYNOS_GRALLOC_VERSION),sgr)
 $(call soong_config_set,arm_gralloc,gralloc_version,four_sgr)
