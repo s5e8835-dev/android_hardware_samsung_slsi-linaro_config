@@ -40,3 +40,7 @@ endif
 ifeq ($(BOARD_USES_ALIGN_RESTRICTION), true)
 $(call soong_config_set_bool,arm_gralloc,uses_align_restriction,true)
 endif
+
+ifeq ($(BOARD_USES_MFC_CHROMA_VALIGN), true)
+$(call soong_config_set_bool,arm_gralloc,mfc_chroma_valign,true)
+endif
